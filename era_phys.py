@@ -1,4 +1,3 @@
-#a = (v - v0)/t
 print("Добро пожаловать в Era!\n")
 
 
@@ -42,20 +41,25 @@ def main():
 			result = (v - v0)/a
 			print(f"\nt = {result}")
 			
-		elif v == "none":	
+		elif v == "none" and v0 != "none":	
 			print( f"\nНаходим ускорение по формуле: \na = (v - v0)/t\na = ({v} - {v0})/{t}")
 			result = a*t
 			print(f"\nv - v0 = {result}")
 			result = result -v0
 			print(f"\nv = {result}")
 		
-		elif v0 == "none":	
+		elif v0 == "none"and v != "none":	
 			print( f"\nНаходим ускорение по формуле: \na = (v - v0)/t\na = ({v} - {v0})/{t}")
 			result = a*t
 			print(f"\nv - v0 = {result}")
 			result = v - result
 			print(f"\nv0 = {result}")
 			
+		elif v0 == "none" and v == "none":
+			print( f"\nНаходим ускорение по формуле: \na = (v - v0)/t\na = ({v} - {v0})/{t}")
+			result = a*t
+			print(f"\nΔv = {result}")
+
 	eval(func)
 	main()
 main()
